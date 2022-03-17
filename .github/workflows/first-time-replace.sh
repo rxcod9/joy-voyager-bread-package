@@ -388,4 +388,7 @@ function caseToPascal() {
   echo "$1" | sed -r 's|_([a-z])|\U\1|g' | sed 's|^\([a-z]\)|\u\1|'
 }
 
-echo $@
+
+echo " starts here " $@
+echo " " $@
+echo " ends here " $@
