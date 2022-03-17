@@ -34,7 +34,7 @@ class ReplaceKeyword extends Model
             $this->created_by_id = Auth::user()->getKey();
         }
 
-        if (Auth::user()) {   
+        if (Auth::user()) {
             $this->modified_by_id = Auth::user()->getKey();
         }
 
