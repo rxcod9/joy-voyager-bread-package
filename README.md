@@ -35,6 +35,8 @@ php artisan migrate
 php artisan db:seed --class="\Joy\VoyagerBreadReplaceKeyword\Database\Seeders\VoyagerDatabaseSeeder" --force
 # 4. Dummy Seeders
 php artisan db:seed --class="\Joy\VoyagerBreadReplaceKeyword\Database\Seeders\VoyagerDummyDatabaseSeeder" --force
+# 4. Optimize [Mostly to clear cache/route cache]
+php artisan optimize
 ```
 
 ---
