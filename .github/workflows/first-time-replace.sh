@@ -388,7 +388,7 @@ function caseToPascal() {
   echo "$1" | sed -r 's|_([a-z])|\U\1|g' | sed 's|^\([a-z]\)|\u\1|'
 }
 
+REPO_NAME=$1
+PACKAGE_KEYWORD=echo $1 | sed -e 's/joy-voyager-bread-//'
 
-echo " starts here " $@
-echo " " $@
-echo " ends here " $@
+srefactor replace-keyword $PACKAGE_KEYWORD

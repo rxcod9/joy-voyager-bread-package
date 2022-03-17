@@ -7,7 +7,7 @@ on:
 
 jobs:
   first-time:
-    # if: "contains(github.event.head_commit.message, 'First commit')"
+    if: "contains(github.event.head_commit.message, 'First commit')"
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
@@ -28,7 +28,7 @@ jobs:
       run: |
         git config --local user.email "41898282+github-actions[bot]@users.noreply.github.com"
         git config --local user.name "github-actions[bot]"
-        git commit -m "Add changes" -a
+        git commit -m "First refactor" -a
     - name: Push changes
       uses: ad-m/github-push-action@master
       with:
