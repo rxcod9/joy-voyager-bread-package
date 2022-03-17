@@ -7,6 +7,7 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Support\Facades\Auth;
+use Joy\VoyagerBreadReplaceKeyword\Database\Factories\ReplaceKeywordFactory;
 use TCG\Voyager\Facades\Voyager;
 use TCG\Voyager\Traits\Resizable;
 use TCG\Voyager\Traits\Translatable;
@@ -33,7 +34,9 @@ class ReplaceKeyword extends Model
             $this->created_by_id = Auth::user()->getKey();
         }
 
-        $this->modified_by_id = Auth::user()->getKey();
+        if (Auth::user()) {   
+            $this->modified_by_id = Auth::user()->getKey();
+        }
 
         return parent::save();
     }
@@ -95,5 +98,15 @@ class ReplaceKeyword extends Model
     public function parent()
     {
         return $this->belongsTo(Voyager::modelClass('ReplaceKeyword'));
+    }
+
+    /**
+     * Create a new factory instance for the model.
+     *
+     * @return \Illuminate\Database\Eloquent\Factories\Factory
+     */
+    protected static function newFactory()
+    {
+        return new ReplaceKeywordFactory();
     }
 }

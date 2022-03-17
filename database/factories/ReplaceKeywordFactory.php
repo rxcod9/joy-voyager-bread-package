@@ -24,7 +24,7 @@ class ReplaceKeywordFactory extends Factory
     {
         return [
             'name' => $this->faker->name(),
-            'description' => $this->faker->description(),
+            'description' => $this->faker->text(500),
         ];
     }
 

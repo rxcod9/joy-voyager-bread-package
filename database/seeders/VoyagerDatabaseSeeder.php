@@ -16,15 +16,15 @@ class VoyagerDatabaseSeeder extends Seeder
         $this->call([
             DataTypesTableSeeder::class,
             DataRowsTableSeeder::class,
-            MenusTableSeeder::class,
+            // MenusTableSeeder::class,
             MenuItemsTableSeeder::class,
-            RolesTableSeeder::class,
+            // RolesTableSeeder::class,
             PermissionsTableSeeder::class,
             PermissionRoleTableSeeder::class,
             SettingsTableSeeder::class,
-            UserSettingsPermissionsTableSeeder::class,
+            // UserSettingsPermissionsTableSeeder::class,
             PermissionRoleTableSeeder::class,
-            UserSettingsTableSeeder::class,
+            // UserSettingsTableSeeder::class,
             ReplaceKeywordsTableSeeder::class,
         ]);
     }

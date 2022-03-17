@@ -16,7 +16,7 @@ class CreateReplaceKeywordsTable extends Migration
         Schema::create('replace_keywords', function (Blueprint $table) {
             $table->id();
             $table->string('name')->nullable();
-            $table->string('description')->nullable();
+            $table->text('description')->nullable();
             $table->string('image')->nullable();
 
             $table->bigInteger('created_by_id')->unsigned()->nullable()->default(null);
