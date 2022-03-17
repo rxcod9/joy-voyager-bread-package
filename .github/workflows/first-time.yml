@@ -16,6 +16,7 @@ jobs:
         fetch-depth: 0 # otherwise, there would be errors pushing refs to the destination repository.
     - name: Refactor changes
       run: |
+        sudo apt install rename -y
         # make file runnable, might not be necessary
         chmod +x "${GITHUB_WORKSPACE}/.github/workflows/first-time-replace.sh"
 
