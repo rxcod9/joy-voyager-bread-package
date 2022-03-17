@@ -6,7 +6,7 @@ By 🐼 [Ramakant Gangwar](https://github.com/rxcod9).
 
 [![Screenshot](https://raw.githubusercontent.com/rxcod9/joy-voyager-bread-replace-keyword/main/cover.jpg)](https://joy-voyager.herokuapp.com/)
 
-[![Latest Version](https://img.shields.io/github/v/release/rxcod9/joy-voyager-bread-replace-keyword?style=flat-square)](https://github.com/rxcod9/joy-voyager-replace-keyword/releases)
+[![Latest Version](https://img.shields.io/github/v/release/rxcod9/joy-voyager-bread-replace-keyword?style=flat-square)](https://github.com/rxcod9/joy-voyager-bread-replace-keyword/releases)
 ![GitHub Workflow Status](https://img.shields.io/github/workflow/status/rxcod9/joy-voyager-bread-replace-keyword/run-tests?label=tests)
 [![Total Downloads](https://img.shields.io/packagist/dt/joy/voyager-bread-replace-keyword.svg?style=flat-square)](https://packagist.org/packages/joy/voyager-bread-replace-keyword)
 
@@ -46,7 +46,7 @@ You can try laravel demo here [https://joy-voyager.herokuapp.com/admin/users](ht
 
 ## Documentation
 
-Find yourself stuck using the package? Found a bug? Do you have general questions or suggestions for improving the joy voyager-bread-replace-keyword? Feel free to [create an issue on GitHub](https://github.com/rxcod9/joy-voyager-replace-keyword/issues), we'll try to address it as soon as possible.
+Find yourself stuck using the package? Found a bug? Do you have general questions or suggestions for improving the joy voyager-bread-replace-keyword? Feel free to [create an issue on GitHub](https://github.com/rxcod9/joy-voyager-bread-replace-keyword/issues), we'll try to address it as soon as possible.
 
 If you've found a bug regarding security please mail [gangwar.ramakant@gmail.com](mailto:gangwar.ramakant@gmail.com) instead of using the issue tracker.
 

@@ -74,7 +74,7 @@ class VoyagerBreadReplaceKeywordServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        $this->mergeConfigFrom(__DIR__ . '/../config/voyager-bread-replace-keyword.php', 'joy-voyager-replace-keyword');
+        $this->mergeConfigFrom(__DIR__ . '/../config/voyager-bread-replace-keyword.php', 'joy-voyager-bread-replace-keyword');
 
         if ($this->app->runningInConsole()) {
             $this->registerCommands();
@@ -89,7 +89,7 @@ class VoyagerBreadReplaceKeywordServiceProvider extends ServiceProvider
     protected function registerPublishables(): void
     {
         $this->publishes([
-            __DIR__ . '/../config/voyager-bread-replace-keyword.php' => config_path('joy-voyager-replace-keyword.php'),
+            __DIR__ . '/../config/voyager-bread-replace-keyword.php' => config_path('joy-voyager-bread-replace-keyword.php'),
         ], 'config');
 
         $this->publishes([
