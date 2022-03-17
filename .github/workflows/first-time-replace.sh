@@ -389,6 +389,6 @@ function caseToPascal() {
 }
 
 REPO_NAME=$1
-PACKAGE_KEYWORD=echo $1 | sed -e 's/joy-voyager-bread-//'
+PACKAGE_KEYWORD=$(echo $1 | sed -e 's/joy-voyager-bread-//')
 
 srefactor replace-keyword $PACKAGE_KEYWORD
