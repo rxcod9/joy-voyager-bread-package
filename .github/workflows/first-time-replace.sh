@@ -55,7 +55,7 @@ function srename() {
     srenamelazy $upperFrom $upperTo
     srenamelazy $lowerFrom $lowerTo
 
-    return 1
+    return 0
   fi
 
   echo "srename {from} {to}"
@@ -78,7 +78,7 @@ function srenamelazy() {
     find . -maxdepth 7 -type f -not -path "./node_modules*" -not -path "./.git/*" -not -path "./bootstrap*" -not -path "./docker*" -not -path "./storage*" \( -name '*.php' -o -name '*.json' -o -name '*.yml' -o -name '*.xml' -o -name '*.md' -o -name '*.blade.php' -o -name '*.ts' -o -name '*.js' -o -name '*.html' -o -name '*.scss' -o -name '*.vue' -o -name '*.png' -o -name '*.jpg' \) -exec rename "s/$fromCommand/$toCommand/" {} +
     echo "srenamedlazy file ${fromCommand} ${toCommand}"
 
-    return 1
+    return 0
   fi
 
   echo "srenamelazy {from} {to}"
@@ -139,7 +139,7 @@ function srenamedry() {
     srenamedrylazy $camelFrom $camelTo
     srenamedrylazy $pascalFrom $pascalTo
 
-    return 1
+    return 0
   fi
 
   echo "srenamedry {from} {to}"
@@ -162,7 +162,7 @@ function srenamedrylazy() {
     find . -maxdepth 7 -type f -not -path "./node_modules*" -not -path "./.git/*" -not -path "./bootstrap*" -not -path "./docker*" -not -path "./storage*" \( -name '*.php' -o -name '*.json' -o -name '*.yml' -o -name '*.xml' -o -name '*.md' -o -name '*.blade.php' -o -name '*.ts' -o -name '*.js' -o -name '*.html' -o -name '*.scss' -o -name '*.vue' -o -name '*.png' -o -name '*.jpg' \) -exec echo "s/$fromCommand/$toCommand/" {} +
     echo "srenameddrylazy file ${fromCommand} ${toCommand}"
 
-    return 1
+    return 0
   fi
 
   echo "srenamedrylazy {from} {to}"
@@ -223,7 +223,7 @@ function sreplace() {
     sreplacelazy $upperFrom $upperTo
     sreplacelazy $lowerFrom $lowerTo
 
-    return 1
+    return 0
   fi
 
   echo "sreplace {from} {to}"
@@ -245,7 +245,7 @@ function sreplacelazy() {
 
     echo "sreplacedlazy ${fromCommand} ${toCommand}"
 
-    return 1
+    return 0
   fi
 
   echo "sreplacelazy {from} {to}"
@@ -306,7 +306,7 @@ function sreplacedry() {
     sreplacedrylazy $camelFrom $camelTo
     sreplacedrylazy $pascalFrom $pascalTo
 
-    return 1
+    return 0
   fi
 
   echo "sreplacedry {from} {to}"
@@ -330,7 +330,7 @@ function sreplacedrylazy() {
 
     echo "sreplaceddrylazy ${fromCommand} ${toCommand}"
 
-    return 1
+    return 0
   fi
 
   echo "sreplacedrylazy {from} {to}"
@@ -341,7 +341,7 @@ function srefactor() {
   if [ $# -eq 2 ]; then
     srename $@
     sreplace $@
-    return 1
+    return 0
   fi
 
   echo "srefactor {from} {to}"
@@ -352,7 +352,7 @@ function srefactordry() {
   if [ $# -eq 2 ]; then
     srenamedry $@
     sreplacedry $@
-    return 1
+    return 0
   fi
 
   echo "srefactordry {from} {to}"
