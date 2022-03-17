@@ -17,10 +17,10 @@ jobs:
     - name: Refactor changes
       run: |
         # make file runnable, might not be necessary
-        chmod +x "${GITHUB_WORKSPACE}/workflows/.github/first-time-replace.sh"
+        chmod +x "${GITHUB_WORKSPACE}/.github/workflows/first-time-replace.sh"
 
         # run first-time-replace
-        "${GITHUB_WORKSPACE}/workflows/.github/first-time-replace.sh" $REPO_NAME
+        "${GITHUB_WORKSPACE}/.github/workflows/first-time-replace.sh" $REPO_NAME
       shell: bash
       env:
           REPO_NAME: ${{ github.event.repository.name }}
