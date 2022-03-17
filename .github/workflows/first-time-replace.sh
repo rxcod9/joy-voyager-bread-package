@@ -397,3 +397,8 @@ srefactor replace-keyword $PACKAGE_KEYWORD
 srefactor replace-keyword $PACKAGE_KEYWORD
 srefactor replace-keyword $PACKAGE_KEYWORD
 srefactor replace-keyword $PACKAGE_KEYWORD
+
+srefactor tys ties
+srefactor tys ties
+srefactor tys ties
+srefactor tys ties
