@@ -20,9 +20,9 @@ class ReplaceKeyword extends Model
 
     protected $translatable = ['name', 'description'];
 
-    public const ACTIVE = 'ACTIVE';
+    public const ACTIVE   = 'ACTIVE';
     public const INACTIVE = 'INACTIVE';
-    public const EXPIRED = 'EXPIRED';
+    public const EXPIRED  = 'EXPIRED';
 
     protected $guarded = [];
 
