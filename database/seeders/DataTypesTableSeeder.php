@@ -18,7 +18,7 @@ class DataTypesTableSeeder extends Seeder
                 'name'                  => 'replace_keywords',
                 'display_name_singular' => __('joy-voyager-bread-replace-keyword::seeders.data_types.replace_keyword.singular'),
                 'display_name_plural'   => __('joy-voyager-bread-replace-keyword::seeders.data_types.replace_keyword.plural'),
-                'icon'                  => 'voyager-bread',
+                'icon'                  => 'voyager-bread voyager-bread-replace-keyword voyager-replace-keyword',
                 'model_name'            => 'Joy\\VoyagerBreadReplaceKeyword\\Models\\ReplaceKeyword',
                 // 'policy_name'           => 'Joy\\VoyagerBreadReplaceKeyword\\Policies\\ReplaceKeywordPolicy',
                 // 'controller'            => 'Joy\\VoyagerBreadReplaceKeyword\\Http\\Controllers\\VoyagerBreadReplaceKeywordController',
