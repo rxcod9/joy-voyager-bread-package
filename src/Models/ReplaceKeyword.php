@@ -5,6 +5,7 @@ namespace Joy\VoyagerBreadReplaceKeyword\Models;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\SoftDeletes;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Support\Facades\Auth;
 use Joy\VoyagerBreadReplaceKeyword\Database\Factories\ReplaceKeywordFactory;
@@ -18,6 +19,7 @@ class ReplaceKeyword extends Model
     use Notifiable;
     use Translatable;
     use Resizable;
+    use SoftDeletes;
 
     protected $translatable = ['name', 'description'];
 

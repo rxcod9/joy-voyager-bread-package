@@ -3,7 +3,7 @@
 namespace Joy\VoyagerBreadReplaceKeyword\Database\Seeders;
 
 use Illuminate\Database\Seeder;
-use TCG\Voyager\Models\DataType;
+use TCG\Voyager\Facades\Voyager;
 
 class DataTypesTableSeeder extends Seeder
 {
@@ -19,7 +19,7 @@ class DataTypesTableSeeder extends Seeder
                 'display_name_singular' => __('joy-voyager-bread-replace-keyword::seeders.data_types.replace_keyword.singular'),
                 'display_name_plural'   => __('joy-voyager-bread-replace-keyword::seeders.data_types.replace_keyword.plural'),
                 'icon'                  => 'voyager-bread voyager-bread-replace-keyword voyager-replace-keyword',
-                'model_name'            => 'Joy\\VoyagerBreadReplaceKeyword\\Models\\ReplaceKeyword',
+                'model_name'            => Voyager::modelClass('ReplaceKeyword'),
                 // 'policy_name'           => 'Joy\\VoyagerBreadReplaceKeyword\\Policies\\ReplaceKeywordPolicy',
                 // 'controller'            => 'Joy\\VoyagerBreadReplaceKeyword\\Http\\Controllers\\VoyagerBreadReplaceKeywordController',
                 'generate_permissions'  => 1,
@@ -38,6 +38,6 @@ class DataTypesTableSeeder extends Seeder
      */
     protected function dataType($field, $for)
     {
-        return DataType::firstOrNew([$field => $for]);
+        return Voyager::model('DataType')->firstOrNew([$field => $for]);
     }
 }

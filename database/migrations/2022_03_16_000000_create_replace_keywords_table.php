@@ -35,6 +35,7 @@ class CreateReplaceKeywordsTable extends Migration
             $table->enum('status', ['ACTIVE', 'INACTIVE', 'EXPIRED'])->default('ACTIVE');
 
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 

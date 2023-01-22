@@ -2,8 +2,8 @@
 
 namespace Joy\VoyagerBreadReplaceKeyword\Database\Seeders;
 
-use Joy\VoyagerBreadReplaceKeyword\Models\ReplaceKeyword;
 use Illuminate\Database\Seeder;
+use TCG\Voyager\Facades\Voyager;
 
 class ReplaceKeywordsTableSeeder extends Seeder
 {
@@ -14,16 +14,16 @@ class ReplaceKeywordsTableSeeder extends Seeder
      */
     public function run()
     {
-        if (ReplaceKeyword::query()->count() > 0) {
+        if (Voyager::model('ReplaceKeyword')->query()->count() > 0) {
             return false;
         }
 
         $count = 20;
-        ReplaceKeyword::factory()
+        Voyager::model('ReplaceKeyword')->factory()
             ->count($count)
             ->state(function (array $attributes) use ($count) {
                 return [
-                    'name' => 'ReplaceKeyword ' . time()
+                    'name'        => 'ReplaceKeyword ' . time()
                         . ' ' . rand(1, $count)
                         . ' ' . rand(1, $count)
                         . ' ' . rand(1, $count),

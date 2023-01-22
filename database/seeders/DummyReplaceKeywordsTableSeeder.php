@@ -4,6 +4,7 @@ namespace Joy\VoyagerBreadReplaceKeyword\Database\Seeders;
 
 use Joy\VoyagerBreadReplaceKeyword\Models\ReplaceKeyword;
 use Illuminate\Database\Seeder;
+use TCG\Voyager\Facades\Voyager;
 
 class DummyReplaceKeywordsTableSeeder extends Seeder
 {
@@ -15,7 +16,7 @@ class DummyReplaceKeywordsTableSeeder extends Seeder
     public function run()
     {
         $count = 20;
-        ReplaceKeyword::factory()
+        Voyager::model('ReplaceKeyword')->factory()
             ->count($count)
             ->state(function (array $attributes) use ($count) {
                 return [
