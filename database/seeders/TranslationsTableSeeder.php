@@ -4,7 +4,6 @@ namespace Joy\VoyagerBreadReplaceKeyword\Database\Seeders;
 
 use Illuminate\Database\Seeder;
 use TCG\Voyager\Facades\Voyager;
-use TCG\Voyager\Models\Translation;
 
 class TranslationsTableSeeder extends Seeder
 {
@@ -98,7 +97,7 @@ class TranslationsTableSeeder extends Seeder
 
     private function trans($lang, $keys, $value)
     {
-        $_t = Translation::firstOrNew(array_merge($keys, [
+        $_t = Voyager::model('Translation')->firstOrNew(array_merge($keys, [
             'locale' => $lang,
         ]));
 
