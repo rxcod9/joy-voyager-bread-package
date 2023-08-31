@@ -60,6 +60,21 @@ class DataRowsTableSeeder extends Seeder
             ])->save();
         }
 
+        $dataRow = $this->dataRow($dataType, 'image');
+        if (!$dataRow->exists) {
+            $dataRow->fill([
+                'type'         => 'image',
+                'display_name' => __('joy-voyager-bread-replace-keyword::seeders.data_rows.image'),
+                'required'     => 0,
+                'browse'       => 1,
+                'read'         => 1,
+                'edit'         => 1,
+                'add'          => 1,
+                'delete'       => 1,
+                'order'        => ++$order,
+            ])->save();
+        }
+
         $dataRow = $this->dataRow($dataType, 'created_at');
         if (!$dataRow->exists) {
             $dataRow->fill([
@@ -101,21 +116,6 @@ class DataRowsTableSeeder extends Seeder
                 'edit'         => 0,
                 'add'          => 0,
                 'delete'       => 0,
-                'order'        => ++$order,
-            ])->save();
-        }
-
-        $dataRow = $this->dataRow($dataType, 'image');
-        if (!$dataRow->exists) {
-            $dataRow->fill([
-                'type'         => 'image',
-                'display_name' => __('joy-voyager-bread-replace-keyword::seeders.data_rows.image'),
-                'required'     => 0,
-                'browse'       => 1,
-                'read'         => 1,
-                'edit'         => 1,
-                'add'          => 1,
-                'delete'       => 1,
                 'order'        => ++$order,
             ])->save();
         }
