@@ -48,7 +48,7 @@ class DataRowsTableSeeder extends Seeder
         $dataRow = $this->dataRow($dataType, 'description');
         if (!$dataRow->exists) {
             $dataRow->fill([
-                'type'         => 'text',
+                'type'         => 'text_area',
                 'display_name' => __('joy-voyager-bread-replace-keyword::seeders.data_rows.description'),
                 'required'     => 1,
                 'browse'       => 1,
